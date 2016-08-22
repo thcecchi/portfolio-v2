@@ -5,19 +5,20 @@ export default class ProjectDescription extends Component {
   getStyles() {
 
    return {
-     linkContainer: {
-       backgroundColor: "#fff",
-       marginLeft: "5%",
+      descriptionContainer: {
+        backgroundColor: "#fff",
+        marginLeft: "5%",
         marginTop: "1%",
-        position: "relative"
+        position: "relative",
+        width: "100%"
      },
-     linkText: {
-       color: '#000',
-       fontFamily: 'Roboto Mono',
-       letterSpacing: 1.75,
-       fontWeight: 100,
-       fontSize: "16px",
-       textDecoration: "underline"
+     descriptionText: {
+        color: '#000',
+        fontFamily: 'Roboto Mono',
+        letterSpacing: 1.25,
+        fontWeight: 100,
+        fontSize: "12px",
+        lineHeight: "1.75"
      }
    };
   }
@@ -32,8 +33,8 @@ export default class ProjectDescription extends Component {
     const styles = this.getStyles();
 
     return (
-      <div>
-        <p>{descriptionText}</p>
+      <div style={styles.descriptionContainer}>
+        <p style={styles.descriptionText}>{this.props.descriptionText}</p>
       </div>
     )
   }

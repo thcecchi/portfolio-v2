@@ -5,7 +5,27 @@ import { openApp } from '../actions/actions'
 import Header from '../components/Header'
 import Loading from '../components/Loading'
 import Subhead from '../components/Subhead'
-import Project from './Project'
+import ProjectContainer from './ProjectContainer'
+import Menu from './Menu'
+
+var wrapper = {
+  width: "100%",
+  float: "left",
+  display: "flex",
+  position: "relative"
+}
+
+var leftCol = {
+  width: "50%",
+  float: "left",
+  flex: "1"
+}
+
+var rightCol = {
+  width: "50%",
+  float: "left",
+  flex: "1"
+}
 
 class AsyncApp extends Component {
   constructor(props) {
@@ -24,7 +44,6 @@ class AsyncApp extends Component {
 
 // logging props////////////
   logProps() {
-    console.log('something')
     console.log(this.props)
   }
 ////////////////////////////
@@ -33,24 +52,26 @@ class AsyncApp extends Component {
     this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     return (
-      <div>
-        <StyleRoot>
-          <Header headerText={this.props.state.appStarter.headerText}/>
+      <div style={wrapper}>
+          <div style={leftCol}>
+            <Header headerText={this.props.state.appStarter.headerText}/>
 
-          {this.props.state.appStarter.subHeaders ?
-            <Subhead subHeaders={this.props.state.appStarter.subHeaders}/>
-            : <p></p>
-          }
+            {this.props.state.appStarter.subHeaders ?
+              <Subhead subHeaders={this.props.state.appStarter.subHeaders}/>
+              : <p></p>
+            }
 
-          {this.props.state.appStarter.projects ?
-            
-            {this.props.state.appStarter.projects.map((item, i) =>
-              <Project linkData={item.linkData} descriptionData={item.descriptionData}/>
-            )}
-            : <p></p>
-          }
-
-        </StyleRoot>
+            {this.props.state.appStarter.projects ?
+                <ProjectContainer ProjectData={this.props.state.appStarter.projects}/>
+              : <p></p>
+            }
+          </div>
+          <div style={rightCol}>
+            {this.props.state.appStarter.menu ?
+                <Menu MenuBtnData={this.props.state.appStarter.menu}/>
+              : <p></p>
+            }
+          </div>
       </div>
     )
   }

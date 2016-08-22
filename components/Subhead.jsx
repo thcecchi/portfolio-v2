@@ -8,8 +8,10 @@ export default class Subhead extends Component {
      subHeaderContainer: {
        backgroundColor: "#fff",
        marginLeft: "5%",
-        marginTop: "1%",
-        position: "relative"
+       marginTop: "3%",
+       marginBottom: "3%",
+       position: "relative",
+       width: "100%"
      },
      subHeaderText: {
        color: '#000',

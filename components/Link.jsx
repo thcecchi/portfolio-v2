@@ -8,21 +8,31 @@ export default class Link extends Component {
      linkContainer: {
        backgroundColor: "#fff",
        marginLeft: "5%",
-        marginTop: "1%",
-        position: "relative"
+       marginTop: "3%",
+       position: "relative",
+       width: "100%"
      },
      linkText: {
-       color: '#000',
+       color: '#ff3800',
        fontFamily: 'Roboto Mono',
-       letterSpacing: 1.75,
+       letterSpacing: 1.25,
        fontWeight: 100,
        fontSize: "16px",
-       textDecoration: "underline"
-     }
+       textDecoration: "none",
+       ":hover": {
+        textDecoration: "underline",
+       }
+     },
+     menuItem: {
+      display: "block",
+      width: "25%",
+      paddingLeft: "75%"
+    }
    };
   }
 
   logProps() {
+    console.log('link')
     console.log(this.props)
   }
 
@@ -32,8 +42,8 @@ export default class Link extends Component {
     const styles = this.getStyles();
 
     return (
-      <div>
-        <a href={this.props.linkUrl}>{this.props.projectTitle}</a>
+      <div style={styles.linkContainer}>
+        <a href={this.props.linkUrl} style={[styles.linkText, this.props.menuItem && styles.menuItem]}>{this.props.linkText}</a>
       </div>
     )
   }

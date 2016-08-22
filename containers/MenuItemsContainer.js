@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
+import { openApp } from '../actions/actions'
 import Link from '../components/Link'
-import ProjectDescription from '../components/ProjectDescription'
 
-class Project extends Component {
+class MenuItemsContainer extends Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -20,7 +20,7 @@ class Project extends Component {
 
 // logging props////////////
   logProps() {
-    console.log('Project')
+    console.log('MenuItemsContainer')
     console.log(this.props)
   }
 ////////////////////////////
@@ -30,25 +30,28 @@ class Project extends Component {
     const { state, isFetching, dispatch, getState } = this.props
     return (
       <div>
-          <StyleRoot>
-            <Link linkText={this.props.linkData.linkText} linkUrl={this.props.linkData.linkUrl}/>
-            <ProjectDescription descriptionText={this.props.descriptionData.projectDescription}/>
-          </StyleRoot>
+        <StyleRoot>
+            {this.props.menuItemsData.map((item, i) =>
+              <Link key={i} menuItem={true} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+            )}
+        </StyleRoot>
       </div>
     )
   }
 }
 
-Project.propTypes = {
+MenuItemsContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
 }
 
 function mapStateToProps(state) {
-  const { projects } = state
+  console.log('state')
+  console.log(state)
+  const { headerText, subHeaders, projects, menu } = state
 
   return {
     state
   }
 }
 
-export default connect(mapStateToProps)(Project)
+export default connect(mapStateToProps)(MenuItemsContainer)

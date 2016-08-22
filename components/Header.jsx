@@ -8,7 +8,7 @@ export default class Header extends Component {
      headerContainer: {
        backgroundColor: "#fff",
        marginLeft: "5%",
-        marginTop: "1%"
+       marginTop: "3%"
      },
      headerText: {
        color: '#000',
