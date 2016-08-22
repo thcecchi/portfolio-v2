@@ -32,7 +32,7 @@ class MenuItemsContainer extends Component {
       <div>
         <StyleRoot>
             {this.props.menuItemsData.map((item, i) =>
-              <Link key={i} menuItem={true} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+              <Link key={i} menuItem={item.linkData.menuItem} menuTitle={item.linkData.menuTitle} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
             )}
         </StyleRoot>
       </div>

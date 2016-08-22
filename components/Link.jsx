@@ -7,8 +7,8 @@ export default class Link extends Component {
    return {
      linkContainer: {
        backgroundColor: "#fff",
-       marginLeft: "5%",
-       marginTop: "3%",
+       marginLeft: "1%",
+       marginTop: "1%",
        position: "relative",
        width: "100%"
      },
@@ -26,9 +26,23 @@ export default class Link extends Component {
      menuItem: {
       display: "block",
       width: "25%",
-      paddingLeft: "75%"
+      paddingLeft: "75%",
+      paddingBottom: "3%",
+      fontSize: "12px"
+    },
+    menuTitle: {
+      color: "#282830",
+      display: "block",
+      width: "25%",
+      paddingLeft: "75%",
+      paddingBottom: "3%",
+      fontSize: "14px",
+      ":hover": {
+        textDecoration: "none",
+        cursor: "default"
+      }
     }
-   };
+   }
   }
 
   logProps() {
@@ -43,7 +57,7 @@ export default class Link extends Component {
 
     return (
       <div style={styles.linkContainer}>
-        <a href={this.props.linkUrl} style={[styles.linkText, this.props.menuItem && styles.menuItem]}>{this.props.linkText}</a>
+        <a href={this.props.linkUrl} style={[styles.linkText, this.props.menuItem && styles.menuItem, this.props.menuTitle && styles.menuTitle]}>{this.props.linkText}</a>
       </div>
     )
   }

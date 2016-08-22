@@ -37,10 +37,12 @@ export default class MenuBtn extends Component {
        fontSize: "16px",
        cursor: "pointer",
        textDecoration: "underline",
-       textAlign: "right",
-       ":hover": "strikethrough"
+       textAlign: "right"
+     },
+     menuOpen: {
+       textDecoration: "line-through"
      }
-   };
+   }
   }
 
   logProps() {
@@ -54,7 +56,7 @@ export default class MenuBtn extends Component {
 
     return (
       <div style={styles.menuBtnContainer}>
-          <p onClick={() => this.props.dispatch(toggleMenu())} style={styles.menuBtnText}>{this.props.menuBtnText}</p>
+          <p onClick={() => this.props.dispatch(toggleMenu())} style={[styles.menuBtnText, this.props.menuOpen && styles.menuOpen]}>{this.props.menuBtnText}</p>
       </div>
     )
   }

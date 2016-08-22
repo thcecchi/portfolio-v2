@@ -8,11 +8,12 @@ function startApp() {
   }
 }
 
-function menuToggle(menuState) {
+function menuToggle(menuState, menuOpen) {
   console.log('toggle menu action')
   return {
     type: TOGGLE_MENU,
-    menuState: menuState
+    menuState: menuState,
+    menuOpen: menuOpen
   }
 }
 
@@ -30,11 +31,11 @@ export function toggleMenu() {
     console.log(getState())
     var state = getState();
     if(state.appStarter.menu.menuState == 'closed') {
-      dispatch(menuToggle('open'))
+      dispatch(menuToggle('open', true))
     }
 
     else {
-      dispatch(menuToggle('closed'))
+      dispatch(menuToggle('closed', false))
     }
   }
 }

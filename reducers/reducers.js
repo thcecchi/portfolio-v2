@@ -17,7 +17,7 @@ function appStarter(state = {
           subHeadText: "A designer and front end developer living in Charleston, SC"
         },
         {
-          subHeadText: "Here are a couple of web things I've created recently"
+          subHeadText: "Here are a couple of web things I've created recently:"
       }],
       projects: [{
           linkData: {
@@ -48,16 +48,75 @@ function appStarter(state = {
       return Object.assign({}, state, {
         menu: {
           menuState: action.menuState,
+          menuOpen: action.menuOpen,
           menuBtnText: "Menu",
           menuItems: [{
             linkData: {
-              linkText: "Github",
+              menuTitle: true,
+              linkText: "Code",
               linkUrl: "#"
             }
           },
           {
             linkData: {
-              linkText: "CodePen",
+              menuItem: true,
+              linkText: "github",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuItem: true,
+              linkText: "codePen",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuTitle: true,
+              linkText: "Writing",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuItem: true,
+              linkText: "medium",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuTitle: true,
+              linkText: "Contact",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuItem: true,
+              linkText: "email",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuItem: true,
+              linkText: "twitter",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuTitle: true,
+              linkText: "Resume",
+              linkUrl: "#"
+            }
+          },
+          {
+            linkData: {
+              menuItem: true,
+              linkText: "pdf",
               linkUrl: "#"
             }
           }]

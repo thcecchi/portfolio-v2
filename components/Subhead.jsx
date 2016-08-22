@@ -14,9 +14,10 @@ export default class Subhead extends Component {
        width: "100%"
      },
      subHeaderText: {
-       color: '#000',
+       color: '#282830',
        fontFamily: 'Roboto Mono',
        letterSpacing: 1.75,
+       lineHeight: "1.75",
        fontWeight: 100,
        fontSize: "16px"
      }

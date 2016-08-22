@@ -4,7 +4,41 @@ import {Radium, StyleRoot} from 'radium'
 import Link from '../components/Link'
 import ProjectDescription from '../components/ProjectDescription'
 
+var projectCard = {
+  boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+  transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
+  backgroundColor: "#fff",
+  width: "80%",
+  borderRadius: "5px",
+  marginLeft: "5%",
+  padding: "1%",
+  marginBottom: "3%",
+  ":hover": {
+    backgroundColor: "#000"
+  }
+}
+
 class Project extends Component {
+
+  getStyles() {
+     return {
+       projectCard: {
+         boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+         transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
+         backgroundColor: "#fff",
+         width: "80%",
+         borderRadius: "5px",
+         marginLeft: "5%",
+         padding: "1%",
+         marginBottom: "3%",
+         ":hover": {
+           boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+           cursor: "pointer"
+         }
+       }
+     }
+   }
+
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -27,14 +61,15 @@ class Project extends Component {
 
   render() {
     this.logProps()
+    const styles = this.getStyles();
     const { state, isFetching, dispatch, getState } = this.props
     return (
-      <div>
-          <StyleRoot>
+      <StyleRoot>
+        <div style={styles.projectCard}>
             <Link linkText={this.props.linkData.linkText} linkUrl={this.props.linkData.linkUrl}/>
             <ProjectDescription descriptionText={this.props.descriptionData.projectDescription}/>
-          </StyleRoot>
-      </div>
+        </div>
+      </StyleRoot>
     )
   }
 }

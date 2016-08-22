@@ -32,7 +32,7 @@ class Menu extends Component {
     return (
       <div>
         <StyleRoot>
-            <MenuBtn menuBtnText={this.props.MenuBtnData.menuBtnText} />
+            <MenuBtn menuOpen={this.props.MenuBtnData.menuOpen} menuBtnText={this.props.MenuBtnData.menuBtnText} />
             {this.props.MenuBtnData.menuState == 'open' ?
                 <MenuItemsContainer menuItemsData={this.props.MenuBtnData.menuItems} />
               : <p></p>

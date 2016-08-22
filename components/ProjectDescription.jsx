@@ -7,13 +7,14 @@ export default class ProjectDescription extends Component {
    return {
       descriptionContainer: {
         backgroundColor: "#fff",
-        marginLeft: "5%",
+        marginLeft: "1%",
+        marginRight: "1%",
         marginTop: "1%",
         position: "relative",
         width: "100%"
      },
      descriptionText: {
-        color: '#000',
+        color: '#282830',
         fontFamily: 'Roboto Mono',
         letterSpacing: 1.25,
         fontWeight: 100,
