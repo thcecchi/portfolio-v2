@@ -6,6 +6,7 @@ export default class Link extends Component {
 
    return {
      linkContainer: {
+      display: "inline-block",
        backgroundColor: "#fff",
        marginLeft: "1%",
        marginTop: "1%",
@@ -13,7 +14,7 @@ export default class Link extends Component {
        width: "100%"
      },
      linkText: {
-       color: '#ff3800',
+       color: '#ff6a40',
        fontFamily: 'Roboto Mono',
        letterSpacing: 1.25,
        fontWeight: 100,
@@ -22,6 +23,12 @@ export default class Link extends Component {
        ":hover": {
         textDecoration: "underline",
        }
+     },
+     inlineContainer: {
+       marginLeft: "5%",
+       marginTop: "1%",
+       marginBottom: "3%",
+       width: "auto"
      },
      menuItem: {
       display: "block",
@@ -41,6 +48,15 @@ export default class Link extends Component {
         textDecoration: "none",
         cursor: "default"
       }
+    },
+    seperatorStyle: {
+      color: '#ff6a40',
+      fontFamily: 'Roboto Mono',
+      marginLeft: "30px",
+      letterSpacing: 1,
+      fontWeight: 100,
+      fontSize: "14px",
+      display: "inline-block"
     }
    }
   }
@@ -56,8 +72,16 @@ export default class Link extends Component {
     const styles = this.getStyles();
 
     return (
-      <div style={styles.linkContainer}>
-        <a href={this.props.linkUrl} style={[styles.linkText, this.props.menuItem && styles.menuItem, this.props.menuTitle && styles.menuTitle]}>{this.props.linkText}</a>
+      <div style={[styles.linkContainer, this.props.inlineContainer && styles.inlineContainer]}>
+        <a href={this.props.linkUrl} style={[styles.linkText,
+                                            this.props.menuItem && styles.menuItem,
+                                            this.props.menuTitle && styles.menuTitle,
+                                            this.props.inline && styles.inline]}>{this.props.linkText}</a>
+
+        {this.props.seperator ?
+            <p style={styles.seperatorStyle}>//</p>
+          : <div></div>
+        }
       </div>
     )
   }

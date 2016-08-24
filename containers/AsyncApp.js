@@ -5,8 +5,11 @@ import { openApp } from '../actions/actions'
 import Header from '../components/Header'
 import Loading from '../components/Loading'
 import Subhead from '../components/Subhead'
+import HRule from '../components/HRule'
+import BodyCopy from '../components/BodyCopy'
 import ProjectContainer from './ProjectContainer'
 import Menu from './Menu'
+import ContactLinks from './ContactLinks'
 
 var wrapper = {
   width: "100%",
@@ -63,6 +66,18 @@ class AsyncApp extends Component {
 
             {this.props.state.appStarter.projects ?
                 <ProjectContainer ProjectData={this.props.state.appStarter.projects}/>
+              : <p></p>
+            }
+
+            <HRule />
+
+            {this.props.state.appStarter.bodyCopy ?
+                <BodyCopy BodyCopyData={this.props.state.appStarter.bodyCopy}/>
+              : <p></p>
+            }
+
+            {this.props.state.appStarter.contactLinks ?
+                <ContactLinks ContactLinkData={this.props.state.appStarter.contactLinks}/>
               : <p></p>
             }
           </div>

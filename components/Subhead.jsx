@@ -11,12 +11,12 @@ export default class Subhead extends Component {
        marginTop: "3%",
        marginBottom: "3%",
        position: "relative",
-       width: "100%"
+       width: "95%"
      },
      subHeaderText: {
        color: '#282830',
        fontFamily: 'Roboto Mono',
-       letterSpacing: 1.75,
+       letterSpacing: 1.25,
        lineHeight: "1.75",
        fontWeight: 100,
        fontSize: "16px"

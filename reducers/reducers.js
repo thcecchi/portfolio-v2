@@ -40,7 +40,23 @@ function appStarter(state = {
       menu: {
         menuState: "closed",
         menuBtnText: "Menu"
-      }
+      },
+      bodyCopy: [{
+        bodyText: "My focus is at the intersection of communication and and front end web technology. I enjoy thinking about and building new ways to tell stories on the web through data visualization interactive editorial and content strategy, I love to talk shop -- contact me at:"
+      }],
+      contactLinks: [{
+        linkData: {
+          linkText: "thcecchi@gmail.com",
+          linkUrl: "#",
+          seperator: true
+        }
+      },
+      {
+        linkData: {
+          linkText: "@tylercecchi",
+          linkUrl: "#"
+        }
+      }]
     })
     case TOGGLE_MENU:
       console.log('toggle Menu reducer')

@@ -1,21 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
+import { openApp } from '../actions/actions'
 import Link from '../components/Link'
-import ProjectDescription from '../components/ProjectDescription'
 
-class Project extends Component {
-
-  getStyles() {
-     return {
-       projectCard: {
-         backgroundColor: "#fff",
-         width: "100%",
-         marginLeft: "4%"
-       }
-     }
-   }
-
+class ContactLinkContainer extends Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -31,36 +20,38 @@ class Project extends Component {
 
 // logging props////////////
   logProps() {
-    console.log('Project')
+    console.log('Contact Links')
     console.log(this.props)
   }
 ////////////////////////////
 
   render() {
     this.logProps()
-    const styles = this.getStyles();
     const { state, isFetching, dispatch, getState } = this.props
     return (
-      <StyleRoot>
-        <div style={styles.projectCard}>
-            <Link linkText={this.props.linkData.linkText} linkUrl={this.props.linkData.linkUrl}/>
-            <ProjectDescription descriptionText={this.props.descriptionData.projectDescription}/>
-        </div>
-      </StyleRoot>
+      <div>
+        <StyleRoot>
+            {this.props.ContactLinkData.map((item, i) =>
+              <Link key={i} inlineContainer={true} seperator={item.linkData.seperator} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+            )}
+        </StyleRoot>
+      </div>
     )
   }
 }
 
-Project.propTypes = {
+ContactLinkContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
 }
 
 function mapStateToProps(state) {
-  const { projects } = state
+  console.log('state')
+  console.log(state)
+  const { headerText, subHeaders, projects, menu } = state
 
   return {
     state
   }
 }
 
-export default connect(mapStateToProps)(Project)
+export default connect(mapStateToProps)(ContactLinkContainer)

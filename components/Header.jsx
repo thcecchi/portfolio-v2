@@ -10,7 +10,7 @@ export default class Header extends Component {
        marginTop: "3%"
      },
      headerText: {
-       color: '#ff3800',
+       color: '#ff6a40',
        fontFamily: 'Roboto Mono',
        letterSpacing: "1.75",
        fontWeight: "400",

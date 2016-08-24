@@ -30,7 +30,7 @@ export default class MenuBtn extends Component {
        position: "relative"
      },
      menuBtnText: {
-       color: '#ff3800',
+       color: '#ff6a40',
        fontFamily: 'Roboto Mono',
        letterSpacing: 1.75,
        fontWeight: 100,
