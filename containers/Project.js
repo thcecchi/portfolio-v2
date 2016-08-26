@@ -43,7 +43,7 @@ class Project extends Component {
     return (
       <StyleRoot>
         <div style={styles.projectCard}>
-            <Link linkText={this.props.linkData.linkText} linkUrl={this.props.linkData.linkUrl}/>
+            <Link linkText={this.props.linkData.linkText} linkId={this.props.linkData.linkId} linkUrl={this.props.linkData.linkUrl}/>
             <ProjectDescription descriptionText={this.props.descriptionData.projectDescription}/>
         </div>
       </StyleRoot>

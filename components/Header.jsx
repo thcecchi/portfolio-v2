@@ -34,7 +34,6 @@ export default class Header extends Component {
         <h1 key="header-text" key="header-text" style={styles.headerText}>{this.props.headerText}</h1>
         <svg width="297px" style={styles.dots} height="21px" viewBox="0 0 297 21" version="1.1">
             <title>dot-bar</title>
-            <desc>Created with Sketch.</desc>
             <defs></defs>
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="iPad-Pro-Landscape" transform="translate(-388.000000, -145.000000)" fill="#2C82C9">

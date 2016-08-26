@@ -21,8 +21,9 @@ function appStarter(state = {
       }],
       projects: [{
           linkData: {
+            linkId: "hoopstats",
             linkText: "HoopStats >",
-            linkUrl: "#"
+            linkUrl: "/work/"
           },
           descriptionData: {
             projectDescription: "HoopStats allows NBA fans to quickly search for player info, season statistic and shooting percentages."
@@ -30,8 +31,9 @@ function appStarter(state = {
         },
         {
           linkData: {
+            linkId: "hoopstats",
             linkText: "DaFans >",
-            linkUrl: "#"
+            linkUrl: "/work/"
           },
           descriptionData: {
             projectDescription: "DaFans is a geolocated messaging site that allows NFL fans to chat with other who are in the same city or town."
