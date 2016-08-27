@@ -1,7 +1,10 @@
 import React, { Component, PropTypes } from 'react'
+import {Link} from 'react-router'
 import Radium from 'radium'
+var RouterLink = require('react-router').Link;
+RouterLink = Radium(Link);
 
-export default class Link extends Component {
+export default class NavLink extends Component {
   getStyles() {
 
    return {
@@ -33,7 +36,7 @@ export default class Link extends Component {
      menuItem: {
       display: "block",
       width: "25%",
-      paddingLeft: "75%",
+      marginLeft: "75%",
       paddingBottom: "3%",
       fontSize: "12px"
     },
@@ -41,7 +44,7 @@ export default class Link extends Component {
       color: "#282830",
       display: "block",
       width: "25%",
-      paddingLeft: "75%",
+      marginLeft: "75%",
       paddingBottom: "3%",
       fontSize: "14px",
       ":hover": {
@@ -73,10 +76,10 @@ export default class Link extends Component {
 
     return (
       <div style={[styles.linkContainer, this.props.inlineContainer && styles.inlineContainer]}>
-        <a href={this.props.linkUrl} style={[styles.linkText,
-                                            this.props.menuItem && styles.menuItem,
-                                            this.props.menuTitle && styles.menuTitle,
-                                            this.props.inline && styles.inline]}>{this.props.linkText}</a>
+      <RouterLink to={`${this.props.linkUrl}${this.props.linkId}`} style={[styles.linkText,
+                                          this.props.menuItem && styles.menuItem,
+                                          this.props.menuTitle && styles.menuTitle,
+                                          this.props.inline && styles.inline]}>{this.props.linkText}</RouterLink>
 
         {this.props.seperator ?
             <p style={styles.seperatorStyle}>//</p>
@@ -87,8 +90,8 @@ export default class Link extends Component {
   }
 }
 
-Link.propTypes = {
+NavLink.propTypes = {
 
 }
 
-module.exports = Radium(Link)
+module.exports = Radium(NavLink)

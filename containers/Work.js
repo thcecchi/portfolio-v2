@@ -3,11 +3,9 @@ import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
 import { openApp } from '../actions/actions'
 import Header from '../components/Header'
-import Loading from '../components/Loading'
 import Subhead from '../components/Subhead'
-import HRule from '../components/HRule'
 import BodyCopy from '../components/BodyCopy'
-import ProjectContainer from './ProjectContainer'
+import HeaderImage from '../components/HeaderImage'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
 
@@ -59,6 +57,7 @@ class Work extends Component {
           <div style={leftCol}>
             <Header headerText={this.props.state.appStarter.headerText}/>
 
+            <HeaderImage imageSrc="http://www.spyderonlines.com/images/wallpapers/random-picture/random-picture-2.jpg"/>
 
             {this.props.state.appStarter.contactLinks ?
                 <ContactLinks ContactLinkData={this.props.state.appStarter.contactLinks}/>

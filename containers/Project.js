@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
-import Link from '../components/Link'
+import NavLink from '../components/NavLink'
 import ProjectDescription from '../components/ProjectDescription'
 
 class Project extends Component {
@@ -43,7 +43,7 @@ class Project extends Component {
     return (
       <StyleRoot>
         <div style={styles.projectCard}>
-            <Link linkText={this.props.linkData.linkText} linkId={this.props.linkData.linkId} linkUrl={this.props.linkData.linkUrl}/>
+            <NavLink linkText={this.props.linkData.linkText} linkId={this.props.linkData.linkId} linkUrl={this.props.linkData.linkUrl}/>
             <ProjectDescription descriptionText={this.props.descriptionData.projectDescription}/>
         </div>
       </StyleRoot>
