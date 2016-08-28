@@ -5,6 +5,7 @@ import { openApp, findWorkById } from '../actions/actions'
 import Header from '../components/Header'
 import Subhead from '../components/Subhead'
 import HeaderImage from '../components/HeaderImage'
+import Link from '../components/Link'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
 import BodyCopyContainer from './BodyCopyContainer'
@@ -26,6 +27,13 @@ var rightCol = {
   width: "50%",
   float: "left",
   flex: "1"
+}
+
+var linkContainer = {
+  marginLeft: "5%",
+  marginTop: "15%",
+  marginBottom: "5%",
+  position: "relative",
 }
 
 class Work extends Component {
@@ -59,6 +67,11 @@ class Work extends Component {
               <div>
                 <Header headerText={this.props.state.appStarter.project.headerText}/>
                 <HeaderImage imageSrc={this.props.state.appStarter.project.projectImgs.imageSrc}/>
+                <div style={linkContainer}>
+                  {this.props.state.appStarter.project.projectLinks.map((item, i) =>
+                    <Link key={i} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+                  )}
+                </div>
                 <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.project.projectBody} />
               </div>
               : <p></p>

@@ -146,6 +146,18 @@ function appStarter(state = {
         return Object.assign({}, state, {
           project: {
             headerText: "TC // Hoopstats",
+            projectLinks: [{
+                linkData: {
+                  linkText: "Live Site",
+                  linkUrl: "#"
+                }
+              },
+              {
+                linkData: {
+                  linkText: "GitHub",
+                  linkUrl: "#"
+                }
+            }],
             projectImgs: {
               imageSrc: "../img/hoopstats-search.png"
             },
@@ -159,6 +171,23 @@ function appStarter(state = {
             {
               imageSrc: "../img/hoopstats-shots.png",
               bodyText: "This is body copy text 3."
+            }],
+            menu: {
+              menuState: "closed",
+              menuBtnText: "Menu"
+            },
+            contactLinks: [{
+              linkData: {
+                linkText: "thcecchi@gmail.com",
+                linkUrl: "#",
+                seperator: true
+              }
+            },
+            {
+              linkData: {
+                linkText: "@tylercecchi",
+                linkUrl: "#"
+              }
             }]
           }
         })
@@ -166,6 +195,18 @@ function appStarter(state = {
         return Object.assign({}, state, {
           project: {
             headerText: "TC // DaaFans",
+            projectLinks: [{
+                linkData: {
+                  linkText: "Live Site",
+                  linkUrl: "#"
+                }
+              },
+              {
+                linkData: {
+                  linkText: "GitHub",
+                  linkUrl: "#"
+                }
+            }],
             projectImgs: {
               imageSrc: "../img/daafans-dt.png"
             },
@@ -184,7 +225,24 @@ function appStarter(state = {
               imageSrc: "../img/daafans-post.png",
               bodyText: ""
             }]
-          }
+          },
+          menu: {
+            menuState: "closed",
+            menuBtnText: "Menu"
+          },
+          contactLinks: [{
+            linkData: {
+              linkText: "thcecchi@gmail.com",
+              linkUrl: "#",
+              seperator: true
+            }
+          },
+          {
+            linkData: {
+              linkText: "@tylercecchi",
+              linkUrl: "#"
+            }
+          }]
         })
       }
   default:
