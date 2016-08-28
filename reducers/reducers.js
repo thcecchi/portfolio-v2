@@ -1,7 +1,7 @@
 import Immutable from 'immutable'
 import { combineReducers } from 'redux'
 import {
-  START_APP, TOGGLE_MENU
+  START_APP, TOGGLE_MENU, SELECT_PROJECT
 } from '../actions/actions'
 
 // 1 //
@@ -31,8 +31,8 @@ function appStarter(state = {
         },
         {
           linkData: {
-            linkId: "hoopstats",
-            linkText: "DaFans >",
+            linkId: "daafans",
+            linkText: "DaaFans >",
             linkUrl: "/work/"
           },
           descriptionData: {
@@ -140,6 +140,53 @@ function appStarter(state = {
           }]
         }
       })
+    case SELECT_PROJECT:
+      console.log('select project reducer')
+      if(action.projectId == "hoopstats") {
+        return Object.assign({}, state, {
+          project: {
+            headerText: "TC // Hoopstats",
+            projectImgs: {
+              imageSrc: "../img/hoopstats-search.png"
+            },
+            projectBody: [{
+              bodyText: "This is body copy text 1."
+            },
+            {
+              imageSrc: "../img/hoopstats-stats.png",
+              bodyText: "This is body copy text 2."
+            },
+            {
+              imageSrc: "../img/hoopstats-shots.png",
+              bodyText: "This is body copy text 3."
+            }]
+          }
+        })
+      } else if (action.projectId == "daafans") {
+        return Object.assign({}, state, {
+          project: {
+            headerText: "TC // DaaFans",
+            projectImgs: {
+              imageSrc: "../img/daafans-dt.png"
+            },
+            projectBody: [{
+              bodyText: "This is body copy text 1."
+            },
+            {
+              imageSrc: "../img/daafans-thread.png",
+              bodyText: "This is body copy text 2."
+            },
+            {
+              imageSrc: "../img/daafans-menu.png",
+              bodyText: "This is body copy text 3."
+            },
+            {
+              imageSrc: "../img/daafans-post.png",
+              bodyText: ""
+            }]
+          }
+        })
+      }
   default:
     return state
   }

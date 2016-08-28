@@ -13,8 +13,8 @@ export default class HeaderImage extends Component {
        marginLeft: "5%"
      },
      imageStyle: {
-       display: "block",
-       border: "1px solid #ff6a40"
+      boxShadow: "0 14px 28px rgba(255,106,64,0.25), 0 10px 10px rgba(255,106,64,0.22)",
+       display: "block"
      }
    };
   }

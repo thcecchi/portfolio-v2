@@ -1,5 +1,6 @@
 export const START_APP = 'START_APP'
 export const TOGGLE_MENU = 'TOGGLE_MENU'
+export const SELECT_PROJECT = 'SELECT_PROJECT'
 
 function startApp() {
   console.log('start app action')
@@ -14,6 +15,14 @@ function menuToggle(menuState, menuOpen) {
     type: TOGGLE_MENU,
     menuState: menuState,
     menuOpen: menuOpen
+  }
+}
+
+function findProject(id) {
+  console.log('find project action')
+  return {
+    type: SELECT_PROJECT,
+    projectId: id
   }
 }
 
@@ -37,5 +46,13 @@ export function toggleMenu() {
     else {
       dispatch(menuToggle('closed', false))
     }
+  }
+}
+
+export function findWorkById(id) {
+  console.log('find work action')
+  return (dispatch, getState) => {
+    var state = getState();
+    dispatch(findProject(id))
   }
 }

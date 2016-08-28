@@ -10,6 +10,7 @@ import BodyCopy from '../components/BodyCopy'
 import ProjectContainer from './ProjectContainer'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
+import BodyCopyContainer from './BodyCopyContainer'
 
 var wrapper = {
   width: "100%",
@@ -72,7 +73,7 @@ class AsyncApp extends Component {
             <HRule />
 
             {this.props.state.appStarter.bodyCopy ?
-                <BodyCopy BodyCopyData={this.props.state.appStarter.bodyCopy}/>
+                <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.bodyCopy} />
               : <p></p>
             }
 

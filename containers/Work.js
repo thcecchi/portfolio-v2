@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
-import { openApp } from '../actions/actions'
+import { openApp, findWorkById } from '../actions/actions'
 import Header from '../components/Header'
 import Subhead from '../components/Subhead'
-import BodyCopy from '../components/BodyCopy'
 import HeaderImage from '../components/HeaderImage'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
+import BodyCopyContainer from './BodyCopyContainer'
 
 var wrapper = {
   width: "100%",
@@ -55,9 +55,14 @@ class Work extends Component {
     return (
       <div style={wrapper}>
           <div style={leftCol}>
-            <Header headerText={this.props.state.appStarter.headerText}/>
-
-            <HeaderImage imageSrc="http://www.spyderonlines.com/images/wallpapers/random-picture/random-picture-2.jpg"/>
+            {this.props.state.appStarter.project ?
+              <div>
+                <Header headerText={this.props.state.appStarter.project.headerText}/>
+                <HeaderImage imageSrc={this.props.state.appStarter.project.projectImgs.imageSrc}/>
+                <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.project.projectBody} />
+              </div>
+              : <p></p>
+            }
 
             {this.props.state.appStarter.contactLinks ?
                 <ContactLinks ContactLinkData={this.props.state.appStarter.contactLinks}/>
