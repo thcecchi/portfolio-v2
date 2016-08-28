@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
 import { openApp, findWorkById } from '../actions/actions'
 import Header from '../components/Header'
+import HRule from '../components/HRule'
 import Subhead from '../components/Subhead'
 import HeaderImage from '../components/HeaderImage'
 import Link from '../components/Link'
@@ -31,8 +32,8 @@ var rightCol = {
 
 var linkContainer = {
   marginLeft: "5%",
-  marginTop: "15%",
-  marginBottom: "5%",
+  marginTop: "3%",
+  marginBottom: "1%",
   position: "relative",
 }
 
@@ -72,6 +73,7 @@ class Work extends Component {
                     <Link key={i} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
                   )}
                 </div>
+                <HRule />
                 <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.project.projectBody} />
               </div>
               : <p></p>

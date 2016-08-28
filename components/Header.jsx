@@ -15,7 +15,8 @@ export default class Header extends Component {
        letterSpacing: "1.75",
        fontWeight: "400",
        fontSize: "28px",
-       zIndex: "2"
+       zIndex: "2",
+       cursor: "pointer"
      },
      dots: {
       position: "absolute",

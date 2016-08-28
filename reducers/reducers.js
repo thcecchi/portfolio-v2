@@ -148,13 +148,13 @@ function appStarter(state = {
             headerText: "TC // Hoopstats",
             projectLinks: [{
                 linkData: {
-                  linkText: "Live Site",
+                  linkText: "Live Site >",
                   linkUrl: "#"
                 }
               },
               {
                 linkData: {
-                  linkText: "GitHub",
+                  linkText: "GitHub >",
                   linkUrl: "#"
                 }
             }],
@@ -208,22 +208,18 @@ function appStarter(state = {
                 }
             }],
             projectImgs: {
-              imageSrc: "../img/daafans-dt.png"
+              imageSrc: "../img/daafans-thread.png"
             },
             projectBody: [{
               bodyText: "This is body copy text 1."
             },
             {
-              imageSrc: "../img/daafans-thread.png",
+              imageSrc: "../img/daafans-post.png",
               bodyText: "This is body copy text 2."
             },
             {
               imageSrc: "../img/daafans-menu.png",
               bodyText: "This is body copy text 3."
-            },
-            {
-              imageSrc: "../img/daafans-post.png",
-              bodyText: ""
             }]
           },
           menu: {

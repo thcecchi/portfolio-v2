@@ -7,7 +7,6 @@ export default class Link extends Component {
    return {
      linkContainer: {
       display: "inline-block",
-       backgroundColor: "#fff",
        marginLeft: "1%",
        marginTop: "1%",
        position: "relative",
