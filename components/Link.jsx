@@ -31,9 +31,7 @@ export default class Link extends Component {
      },
      menuItem: {
       display: "block",
-      width: "25%",
-      paddingLeft: "75%",
-      paddingBottom: "3%",
+      paddingBottom: "10%",
       fontSize: "12px"
     },
     menuTitle: {
@@ -41,9 +39,7 @@ export default class Link extends Component {
       letterSpacing: 1.25,
       fontWeight: 100,
       color: "#282830",
-      display: "block",
-      width: "25%",
-      paddingLeft: "75%",
+      display: "inline-block",
       paddingBottom: "1%",
       fontSize: "14px"
     },

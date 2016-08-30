@@ -4,6 +4,11 @@ import {Radium, StyleRoot} from 'radium'
 import { openApp } from '../actions/actions'
 import Link from '../components/Link'
 
+var menuItemsContainerStyle = {
+  width: "25%",
+  paddingLeft: "75%",
+}
+
 class MenuItemsContainer extends Component {
   constructor(props) {
     super(props)
@@ -29,7 +34,7 @@ class MenuItemsContainer extends Component {
     this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     return (
-      <div>
+      <div style={menuItemsContainerStyle}>
         <StyleRoot>
             {this.props.menuItemsData.map((item, i) =>
               <Link key={i} menuItem={item.linkData.menuItem} menuTitle={item.linkData.menuTitle} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />

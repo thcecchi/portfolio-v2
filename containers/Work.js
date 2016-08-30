@@ -33,7 +33,7 @@ var rightCol = {
 var customLinkContainerStyle = {
   marginLeft: "4%",
   marginTop: "2%",
-  marginBottom: "1%",
+  marginBottom: "4%",
   position: "relative",
 }
 
@@ -76,11 +76,13 @@ class Work extends Component {
                 <div style={customBodyCopyStyle}>
                   <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.project.created} />
                 </div>
-                <div style={customLinkContainerStyle}>
-                  {this.props.state.appStarter.project.projectLinks.map((item, i) =>
+
+                {this.props.state.appStarter.project.projectLinks.map((item, i) =>
+                  <div style={customLinkContainerStyle}>
                     <Link key={i} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
-                  )}
-                </div>
+                  </div>
+                )}
+
                 <HRule />
                 <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.project.projectBody} />
               </div>

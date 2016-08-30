@@ -200,7 +200,7 @@ function appStarter(state = {
             projectLinks: [{
                 linkData: {
                   linkText: "Live Site",
-                  linkUrl: "#"
+                  linkUrl: "#",
                 }
               },
               {

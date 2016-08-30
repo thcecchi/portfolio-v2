@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { browserHistory } from 'react-router'
 import Radium from 'radium'
 
 export default class Header extends Component {
@@ -28,8 +29,14 @@ export default class Header extends Component {
   }
 
   logProps() {
-    console.log('link')
+    console.log('header')
     console.log(this.props)
+  }
+
+  goToHome() {
+    console.log('home')
+    console.log(this)
+    browserHistory.push('/');
   }
 
   render() {
@@ -38,7 +45,7 @@ export default class Header extends Component {
     const styles = this.getStyles();
 
     return (
-      <div style={styles.headerContainer}>
+      <div onClick={this.goToHome.bind(this)} style={styles.headerContainer}>
         <h1 key="header-text" key="header-text" style={styles.headerText}>{this.props.headerText}</h1>
         <svg width="297px" style={styles.dots} height="21px" viewBox="0 0 297 21" version="1.1">
             <title>dot-bar</title>
