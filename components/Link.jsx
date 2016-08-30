@@ -37,16 +37,15 @@ export default class Link extends Component {
       fontSize: "12px"
     },
     menuTitle: {
+      fontFamily: 'Roboto Mono',
+      letterSpacing: 1.25,
+      fontWeight: 100,
       color: "#282830",
       display: "block",
       width: "25%",
       paddingLeft: "75%",
-      paddingBottom: "3%",
-      fontSize: "14px",
-      ":hover": {
-        textDecoration: "none",
-        cursor: "default"
-      }
+      paddingBottom: "1%",
+      fontSize: "14px"
     },
     seperatorStyle: {
       color: '#ff6a40',
@@ -72,10 +71,12 @@ export default class Link extends Component {
 
     return (
       <div style={[styles.linkContainer, this.props.inlineContainer && styles.inlineContainer]}>
-        <a href={this.props.linkUrl} style={[styles.linkText,
+        {this.props.menuTitle ?
+          <p style={styles.menuTitle}>{this.props.linkText}</p>
+        : <a href={this.props.linkUrl} style={[styles.linkText,
                                             this.props.menuItem && styles.menuItem,
-                                            this.props.menuTitle && styles.menuTitle,
                                             this.props.inline && styles.inline]}>{this.props.linkText}</a>
+        }
 
         {this.props.seperator ?
             <p style={styles.seperatorStyle}>//</p>

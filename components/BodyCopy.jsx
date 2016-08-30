@@ -27,7 +27,8 @@ export default class BodyCopy extends Component {
       boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
       display: "block",
       marginTop: "10%",
-      marginBottom: "10%"
+      marginBottom: "10%",
+      border: "1px solid #282830"
      }
    };
   }

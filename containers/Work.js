@@ -30,11 +30,16 @@ var rightCol = {
   flex: "1"
 }
 
-var linkContainer = {
-  marginLeft: "5%",
-  marginTop: "3%",
+var customLinkContainerStyle = {
+  marginLeft: "4%",
+  marginTop: "2%",
   marginBottom: "1%",
   position: "relative",
+}
+
+var customBodyCopyStyle = {
+  marginTop: "4%",
+  marginBottom: "1%"
 }
 
 class Work extends Component {
@@ -68,7 +73,10 @@ class Work extends Component {
               <div>
                 <Header headerText={this.props.state.appStarter.project.headerText}/>
                 <HeaderImage imageSrc={this.props.state.appStarter.project.projectImgs.imageSrc}/>
-                <div style={linkContainer}>
+                <div style={customBodyCopyStyle}>
+                  <BodyCopyContainer bodyCopyContainerData={this.props.state.appStarter.project.created} />
+                </div>
+                <div style={customLinkContainerStyle}>
                   {this.props.state.appStarter.project.projectLinks.map((item, i) =>
                     <Link key={i} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
                   )}

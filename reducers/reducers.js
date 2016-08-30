@@ -71,8 +71,7 @@ function appStarter(state = {
           menuItems: [{
             linkData: {
               menuTitle: true,
-              linkText: "Code",
-              linkUrl: "#"
+              linkText: "Code"
             }
           },
           {
@@ -92,8 +91,7 @@ function appStarter(state = {
           {
             linkData: {
               menuTitle: true,
-              linkText: "Writing",
-              linkUrl: "#"
+              linkText: "Writing"
             }
           },
           {
@@ -106,8 +104,7 @@ function appStarter(state = {
           {
             linkData: {
               menuTitle: true,
-              linkText: "Contact",
-              linkUrl: "#"
+              linkText: "Contact"
             }
           },
           {
@@ -127,8 +124,7 @@ function appStarter(state = {
           {
             linkData: {
               menuTitle: true,
-              linkText: "Resume",
-              linkUrl: "#"
+              linkText: "Resume"
             }
           },
           {
@@ -146,15 +142,18 @@ function appStarter(state = {
         return Object.assign({}, state, {
           project: {
             headerText: "TC // Hoopstats",
+            created: [{
+              bodyText: "Created 2016"
+            }],
             projectLinks: [{
                 linkData: {
-                  linkText: "Live Site >",
+                  linkText: "Live Site",
                   linkUrl: "#"
                 }
               },
               {
                 linkData: {
-                  linkText: "GitHub >",
+                  linkText: "GitHub",
                   linkUrl: "#"
                 }
             }],
@@ -195,6 +194,9 @@ function appStarter(state = {
         return Object.assign({}, state, {
           project: {
             headerText: "TC // DaaFans",
+            created: [{
+              bodyText: "Created 2016"
+            }],
             projectLinks: [{
                 linkData: {
                   linkText: "Live Site",
