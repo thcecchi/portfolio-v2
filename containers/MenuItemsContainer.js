@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {Radium, StyleRoot} from 'radium'
+import {Motion, spring} from 'react-motion';
 import { openApp } from '../actions/actions'
 import Link from '../components/Link'
 
@@ -27,6 +28,7 @@ class MenuItemsContainer extends Component {
   logProps() {
     console.log('MenuItemsContainer')
     console.log(this.props)
+
   }
 ////////////////////////////
 
@@ -37,7 +39,7 @@ class MenuItemsContainer extends Component {
       <div style={menuItemsContainerStyle}>
         <StyleRoot>
             {this.props.menuItemsData.map((item, i) =>
-              <Link key={i} menuItem={item.linkData.menuItem} menuTitle={item.linkData.menuTitle} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+              <Link key={i} itemNum={i} menuItem={item.linkData.menuItem} menuTitle={item.linkData.menuTitle} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
             )}
         </StyleRoot>
       </div>
@@ -46,7 +48,7 @@ class MenuItemsContainer extends Component {
 }
 
 MenuItemsContainer.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
