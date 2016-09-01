@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
+import Radium, { StyleRoot } from 'radium'
 import AsyncApp from './AsyncApp'
 
 export default class Root extends Component {
@@ -9,7 +10,9 @@ export default class Root extends Component {
     document.body.style.margin = "0";
 
     return (
+      <StyleRoot>
         <AsyncApp />
+      </StyleRoot>
     )
   }
 }

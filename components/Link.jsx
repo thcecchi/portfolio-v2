@@ -34,11 +34,14 @@ export default class Link extends Component {
       display: "block",
       paddingBottom: "10%",
       fontSize: "12px",
-      opacity: "0.1",
-      transition: "opacity .1s ease-in"
+      marginTop: "-10px",
+      opacity: "0",
+      position: "relative",
+      transition: "opacity .5s ease-in"
     },
     transition: {
-     opacity: "1"
+     opacity: "1",
+     top: "0px"
     },
     menuTitle: {
       fontFamily: 'Roboto Mono',
@@ -48,8 +51,9 @@ export default class Link extends Component {
       display: "inline-block",
       paddingBottom: "1%",
       fontSize: "14px",
-      opacity: "0.1",
-      transition: "opacity .1s ease-in"
+      opacity: "0",
+      position: "relative",
+      transition: "opacity .5s ease-in"
     },
     seperatorStyle: {
       color: '#ff6a40',
@@ -66,7 +70,7 @@ export default class Link extends Component {
   componentDidMount() {
     const { dispatch } = this.props
     if (this.props.menuTitle || this.props.menuItem) {
-    var num = this.props.itemNum * 25
+    var num = this.props.itemNum * 50
 
       setTimeout(function() {
         this.setState({transition: true});

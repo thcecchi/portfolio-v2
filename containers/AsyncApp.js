@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import {Radium, StyleRoot} from 'radium'
+import Radium from 'radium'
 import { openApp } from '../actions/actions'
 import Header from '../components/Header'
 import Loading from '../components/Loading'
@@ -12,26 +12,31 @@ import Menu from './Menu'
 import ContactLinks from './ContactLinks'
 import BodyCopyContainer from './BodyCopyContainer'
 
-var wrapper = {
-  width: "100%",
-  float: "left",
-  display: "flex",
-  position: "relative"
-}
-
-var leftCol = {
-  width: "50%",
-  float: "left",
-  flex: "1"
-}
-
-var rightCol = {
-  width: "50%",
-  float: "left",
-  flex: "1"
-}
-
 class AsyncApp extends Component {
+
+  getStyles() {
+     return {
+       wrapper: {
+         width: "100%",
+         float: "left",
+         display: "flex",
+         position: "relative"
+       },
+       leftCol: {
+         width: "50%",
+         float: "left",
+         flex: "1",
+         "@media (max-width : 460px)": {
+            flex: "3"
+          }
+       },
+       rightCol: {
+         width: "50%",
+         float: "left",
+         flex: "1"
+       }
+     }
+   }
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -54,10 +59,11 @@ class AsyncApp extends Component {
 
   render() {
     this.logProps()
+    const styles = this.getStyles();
     const { state, isFetching, dispatch, getState } = this.props
     return (
-      <div style={wrapper}>
-          <div style={leftCol}>
+      <div style={styles.wrapper}>
+          <div style={styles.leftCol}>
             <Header headerText={this.props.state.appStarter.headerText}/>
 
             {this.props.state.appStarter.subHeaders ?
@@ -82,7 +88,7 @@ class AsyncApp extends Component {
               : <p></p>
             }
           </div>
-          <div style={rightCol}>
+          <div style={styles.rightCol}>
             {this.props.state.appStarter.menu ?
                 <Menu MenuBtnData={this.props.state.appStarter.menu}/>
               : <p></p>
@@ -107,4 +113,5 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(AsyncApp)
+AsyncApp = Radium(AsyncApp)
+export default connect(mapStateToProps)(AsyncApp);
