@@ -23,7 +23,6 @@ export default class MenuBtn extends Component {
   getStyles() {
    return {
      menuBtnContainer: {
-       backgroundColor: "#fff",
        marginRight: "5%",
        marginTop: "3%",
        marginBottom: "3%",

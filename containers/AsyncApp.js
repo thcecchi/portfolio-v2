@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Radium from 'radium'
 import { openApp } from '../actions/actions'
 import Header from '../components/Header'
-import Loading from '../components/Loading'
+import Shade from '../components/Shade'
 import Subhead from '../components/Subhead'
 import HRule from '../components/HRule'
 import BodyCopy from '../components/BodyCopy'
@@ -20,20 +20,30 @@ class AsyncApp extends Component {
          width: "100%",
          float: "left",
          display: "flex",
-         position: "relative"
+         position: "relative",
+         "@media (max-width : 460px)": {
+           flexDirection: "column"
+          }
        },
        leftCol: {
-         width: "50%",
-         float: "left",
          flex: "1",
          "@media (max-width : 460px)": {
-            flex: "3"
+           order: "2",
+           position: "relative",
+           width: "100vw",
+           height: "95vh"
           }
        },
        rightCol: {
-         width: "50%",
-         float: "left",
-         flex: "1"
+         flex: "1",
+         zIndex: "10",
+         "@media (max-width : 460px)": {
+            order: "1",
+            position: "relative",
+            width: "100vw",
+            height: "5vh",
+            paddingBottom: "5%"
+          }
        }
      }
    }
@@ -63,6 +73,11 @@ class AsyncApp extends Component {
     const { state, isFetching, dispatch, getState } = this.props
     return (
       <div style={styles.wrapper}>
+          {this.props.state.appStarter.menu ?
+              <Shade shadeState={this.props.state.appStarter.menu.menuOpen} />
+            : <p></p>
+          }
+
           <div style={styles.leftCol}>
             <Header headerText={this.props.state.appStarter.headerText}/>
 

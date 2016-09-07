@@ -6,6 +6,7 @@ import MenuBtn from '../components/MenuBtn'
 import MenuItemsContainer from './MenuItemsContainer'
 
 class Menu extends Component {
+
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)

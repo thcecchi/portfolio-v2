@@ -8,7 +8,6 @@ export default class HeaderImage extends Component {
      imageContainer: {
        display: "block",
        position: "relative",
-       width: "100%",
        marginTop: "10%",
        marginLeft: "5%"
      },

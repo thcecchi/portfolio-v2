@@ -32,7 +32,7 @@ class ContactLinkContainer extends Component {
       <div>
         <StyleRoot>
             {this.props.ContactLinkData.map((item, i) =>
-              <Link key={i} inlineContainer={true} seperator={item.linkData.seperator} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+              <Link key={i} contactLink={true} inlineContainer={true} seperator={item.linkData.seperator} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
             )}
         </StyleRoot>
       </div>

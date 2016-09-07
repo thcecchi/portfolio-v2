@@ -7,10 +7,10 @@ export default class HRule extends Component {
    return {
      HRule: {
        marginLeft: "5%",
+       marginRight: "5%",
        marginTop: "3%",
        marginBottom: "3%",
        position: "relative",
-       width: "100%",
        borderBottom: "1px solid #ff6a40"
      }
    };

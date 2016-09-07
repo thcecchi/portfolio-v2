@@ -10,9 +10,7 @@ export default class Root extends Component {
     document.body.style.margin = "0";
 
     return (
-      <StyleRoot>
         <AsyncApp />
-      </StyleRoot>
     )
   }
 }

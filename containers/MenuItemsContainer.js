@@ -1,16 +1,24 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import {Radium, StyleRoot} from 'radium'
+import Radium from 'radium'
 import {Motion, spring} from 'react-motion';
 import { openApp } from '../actions/actions'
 import Link from '../components/Link'
 
-var menuItemsContainerStyle = {
-  width: "25%",
-  paddingLeft: "75%",
-}
-
 class MenuItemsContainer extends Component {
+
+  getStyles() {
+     return {
+       menuItemsContainerStyle: {
+         width: "25%",
+         paddingLeft: "75%",
+         "@media (max-width : 460px)": {
+           paddingLeft: "50%"
+          }
+       }
+     }
+  }
+
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -35,13 +43,12 @@ class MenuItemsContainer extends Component {
   render() {
     this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
+    const styles = this.getStyles();
     return (
-      <div style={menuItemsContainerStyle}>
-        <StyleRoot>
-            {this.props.menuItemsData.map((item, i) =>
-              <Link key={i} itemNum={i} menuItem={item.linkData.menuItem} menuTitle={item.linkData.menuTitle} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
-            )}
-        </StyleRoot>
+      <div style={styles.menuItemsContainerStyle}>
+        {this.props.menuItemsData.map((item, i) =>
+          <Link key={i} itemNum={i} menuItem={item.linkData.menuItem} menuTitle={item.linkData.menuTitle} linkText={item.linkData.linkText} linkUrl={item.linkData.linkUrl} />
+        )}
       </div>
     )
   }
@@ -61,4 +68,5 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(MenuItemsContainer)
+MenuItemsContainer = Radium(MenuItemsContainer)
+export default connect(mapStateToProps)(MenuItemsContainer);

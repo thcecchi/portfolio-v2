@@ -1,34 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import {Radium, StyleRoot} from 'radium'
+import Radium from 'radium'
 import { openApp, findWorkById } from '../actions/actions'
 import Header from '../components/Header'
 import HRule from '../components/HRule'
+import Shade from '../components/Shade'
 import Subhead from '../components/Subhead'
 import HeaderImage from '../components/HeaderImage'
 import Link from '../components/Link'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
 import BodyCopyContainer from './BodyCopyContainer'
-
-var wrapper = {
-  width: "100%",
-  float: "left",
-  display: "flex",
-  position: "relative"
-}
-
-var leftCol = {
-  width: "50%",
-  float: "left",
-  flex: "1"
-}
-
-var rightCol = {
-  width: "50%",
-  float: "left",
-  flex: "1"
-}
 
 var customLinkContainerStyle = {
   marginLeft: "4%",
@@ -43,6 +25,41 @@ var customBodyCopyStyle = {
 }
 
 class Work extends Component {
+
+  getStyles() {
+     return {
+       wrapper: {
+         width: "100%",
+         float: "left",
+         display: "flex",
+         position: "relative",
+         "@media (max-width : 460px)": {
+           flexDirection: "column"
+          }
+       },
+       leftCol: {
+         flex: "1",
+         "@media (max-width : 460px)": {
+           order: "2",
+           position: "relative",
+           width: "100vw",
+           height: "95vh"
+          }
+       },
+       rightCol: {
+         flex: "1",
+         zIndex: "10",
+         "@media (max-width : 460px)": {
+            order: "1",
+            position: "relative",
+            width: "100vw",
+            height: "5vh",
+            paddingBottom: "5%"
+          }
+       }
+     }
+   }
+
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -66,9 +83,14 @@ class Work extends Component {
   render() {
     this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
+    const styles = this.getStyles();
     return (
-      <div style={wrapper}>
-          <div style={leftCol}>
+      <div style={styles.wrapper}>
+          {this.props.state.appStarter.menu ?
+              <Shade shadeState={this.props.state.appStarter.menu.menuOpen} />
+            : <p></p>
+          }
+          <div style={styles.leftCol}>
             {this.props.state.appStarter.project ?
               <div>
                 <Header headerText={this.props.state.appStarter.project.headerText}/>
@@ -94,7 +116,7 @@ class Work extends Component {
               : <p></p>
             }
           </div>
-          <div style={rightCol}>
+          <div style={styles.rightCol}>
             {this.props.state.appStarter.menu ?
                 <Menu MenuBtnData={this.props.state.appStarter.menu}/>
               : <p></p>
@@ -119,4 +141,5 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Work)
+Work = Radium(Work)
+export default connect(mapStateToProps)(Work);

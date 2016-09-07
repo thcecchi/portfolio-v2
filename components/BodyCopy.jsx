@@ -9,8 +9,7 @@ export default class BodyCopy extends Component {
        marginLeft: "5%",
        marginTop: "3%",
        marginBottom: "1%",
-       position: "relative",
-       width: "98%"
+       position: "relative"
      },
      bodyCopyText: {
       fontSize: "14px",

@@ -10,8 +10,7 @@ export default class ProjectDescription extends Component {
         marginLeft: "1%",
         marginRight: "1%",
         marginTop: "1%",
-        position: "relative",
-        width: "100%"
+        position: "relative"
      },
      descriptionText: {
         color: '#282830',
