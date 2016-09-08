@@ -12,7 +12,7 @@ class MenuItemsContainer extends Component {
        menuItemsContainerStyle: {
          width: "25%",
          paddingLeft: "75%",
-         "@media (max-width : 460px)": {
+         "@media (max-width : 768px)": {
            paddingLeft: "50%"
           }
        }

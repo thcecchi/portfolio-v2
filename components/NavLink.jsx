@@ -23,8 +23,10 @@ export default class NavLink extends Component {
        fontWeight: 100,
        fontSize: "16px",
        textDecoration: "none",
+       transition: "color .1s ease-in",
        ":hover": {
         textDecoration: "underline",
+        color: '#F3410E'
        }
      },
      inlineContainer: {

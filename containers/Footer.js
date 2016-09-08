@@ -14,7 +14,7 @@ class Footer extends Component {
         paddingBottom:"1%"
        },
        iconContainerStyle: {
-         "@media (max-width : 460px)": {
+         "@media (max-width : 768px)": {
            position: "relative",
            display: "flex",
            justifyContent: "space-around"

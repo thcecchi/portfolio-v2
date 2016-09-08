@@ -22,13 +22,13 @@ class AsyncApp extends Component {
          float: "left",
          display: "flex",
          position: "relative",
-         "@media (max-width : 460px)": {
+         "@media (max-width : 768px)": {
            flexDirection: "column"
           }
        },
        leftCol: {
          flex: "1",
-         "@media (max-width : 460px)": {
+         "@media (max-width : 768px)": {
            order: "2",
            position: "relative",
            width: "100vw",
@@ -38,7 +38,7 @@ class AsyncApp extends Component {
        rightCol: {
          flex: "1",
          zIndex: "10",
-         "@media (max-width : 460px)": {
+         "@media (max-width : 768px)": {
             order: "1",
             position: "relative",
             width: "100vw",

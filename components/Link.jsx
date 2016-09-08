@@ -21,8 +21,10 @@ export default class Link extends Component {
        fontWeight: 100,
        fontSize: "16px",
        textDecoration: "none",
+       transition: "color .1s ease-in",
        ":hover": {
-        textDecoration: "underline"
+        textDecoration: "underline",
+        color: '#F3410E'
        }
      },
      inlineContainer: {
@@ -46,8 +48,8 @@ export default class Link extends Component {
     },
     menuTitle: {
       fontFamily: 'Roboto Mono',
-      letterSpacing: 1.25,
-      fontWeight: 100,
+      letterSpacing: "1.25",
+      fontWeight: "100",
       color: "#282830",
       display: "inline-block",
       paddingBottom: "1%",
@@ -57,8 +59,8 @@ export default class Link extends Component {
       transition: "opacity .2s ease-in"
     },
     contactLink: {
-      "@media (max-width : 460px)": {
-        fontSize: "12px"
+      "@media (max-width : 768px)": {
+        fontSize: "10px"
        }
     },
     seperatorStyle: {
@@ -73,13 +75,11 @@ export default class Link extends Component {
     iconStyle: {
       color: '#ff6a40',
       opacity: '1',
-      letterSpacing: 1.25,
-      fontWeight: 100,
       fontSize: "20px",
       textDecoration: "none",
-      transition: "opacity .1s ease-in",
-      ':hover': {
-        opacity: '.1'
+      transition: "color .1s ease-in",
+      ":hover": {
+        color: '#F3410E'
       }
     }
    }
@@ -111,11 +111,10 @@ export default class Link extends Component {
       <div style={[styles.linkContainer, this.props.inlineContainer && styles.inlineContainer]}>
 
         {this.props.icon ?
-          <a href={this.props.linkUrl}>
+          <a href={this.props.linkUrl} style={styles.iconStyle} key={this.props.iconName} target="_blank">
             <FontAwesome
               className={this.props.iconName}
               name={this.props.iconName}
-              style={styles.iconStyle}
             />
           </a>
           : <div></div>
@@ -123,7 +122,7 @@ export default class Link extends Component {
 
         {this.props.menuTitle ?
           <p style={[styles.menuTitle, this.state.transition && styles.transition]}>{this.props.linkText}</p>
-        : <a href={this.props.linkUrl} style={[styles.linkText,
+        : <a href={this.props.linkUrl} target="_blank" style={[styles.linkText,
                                             this.props.menuItem && styles.menuItem,
                                             this.props.inline && styles.inline,
                                             this.props.contactLink && styles.contactLink,
