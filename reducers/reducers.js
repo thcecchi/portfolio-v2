@@ -58,7 +58,33 @@ function appStarter(state = {
           linkText: "@tylercecchi",
           linkUrl: "#"
         }
-      }]
+      }],
+      footer: {
+        footerLinks: [{
+          linkData: {
+            iconName: "github-alt",
+            linkUrl: "#"
+          }
+        },
+        {
+          linkData: {
+            iconName: "codepen",
+            linkUrl: "#"
+          }
+        },
+        {
+          linkData: {
+            iconName: "medium",
+            linkUrl: "#"
+          }
+        },
+        {
+          linkData: {
+            iconName: "twitter",
+            linkUrl: "#"
+          }
+        }]
+      }
     })
     case TOGGLE_MENU:
       console.log('toggle Menu reducer')

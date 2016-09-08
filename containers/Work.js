@@ -11,6 +11,7 @@ import Link from '../components/Link'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
 import BodyCopyContainer from './BodyCopyContainer'
+import Footer from './Footer'
 
 var customLinkContainerStyle = {
   marginLeft: "4%",
@@ -111,8 +112,8 @@ class Work extends Component {
               : <p></p>
             }
 
-            {this.props.state.appStarter.contactLinks ?
-                <ContactLinks ContactLinkData={this.props.state.appStarter.contactLinks}/>
+            {this.props.state.appStarter.footer ?
+                <Footer FooterData={this.props.state.appStarter.footer}/>
               : <p></p>
             }
           </div>

@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import Radium from 'radium'
+import FontAwesome from 'react-fontawesome'
 
 export default class Link extends Component {
   getStyles() {
@@ -21,7 +22,7 @@ export default class Link extends Component {
        fontSize: "16px",
        textDecoration: "none",
        ":hover": {
-        textDecoration: "underline",
+        textDecoration: "underline"
        }
      },
      inlineContainer: {
@@ -68,6 +69,18 @@ export default class Link extends Component {
       fontWeight: 100,
       fontSize: "14px",
       display: "inline"
+    },
+    iconStyle: {
+      color: '#ff6a40',
+      opacity: '1',
+      letterSpacing: 1.25,
+      fontWeight: 100,
+      fontSize: "20px",
+      textDecoration: "none",
+      transition: "opacity .1s ease-in",
+      ':hover': {
+        opacity: '.1'
+      }
     }
    }
   }
@@ -96,6 +109,18 @@ export default class Link extends Component {
     return (
     <ReactCSSTransitionGroup transitionName="example">
       <div style={[styles.linkContainer, this.props.inlineContainer && styles.inlineContainer]}>
+
+        {this.props.icon ?
+          <a href={this.props.linkUrl}>
+            <FontAwesome
+              className={this.props.iconName}
+              name={this.props.iconName}
+              style={styles.iconStyle}
+            />
+          </a>
+          : <div></div>
+        }
+
         {this.props.menuTitle ?
           <p style={[styles.menuTitle, this.state.transition && styles.transition]}>{this.props.linkText}</p>
         : <a href={this.props.linkUrl} style={[styles.linkText,

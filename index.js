@@ -9,6 +9,8 @@ import { Router, Route, browserHistory } from 'react-router'
 import Root from './containers/Root'
 import Work from './containers/Work'
 
+import "font-awesome-webpack"
+
 const store = configureStore()
 
 render((

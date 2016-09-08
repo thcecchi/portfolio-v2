@@ -11,6 +11,7 @@ import ProjectContainer from './ProjectContainer'
 import Menu from './Menu'
 import ContactLinks from './ContactLinks'
 import BodyCopyContainer from './BodyCopyContainer'
+import Footer from './Footer'
 
 class AsyncApp extends Component {
 
@@ -100,6 +101,11 @@ class AsyncApp extends Component {
 
             {this.props.state.appStarter.contactLinks ?
                 <ContactLinks ContactLinkData={this.props.state.appStarter.contactLinks}/>
+              : <p></p>
+            }
+
+            {this.props.state.appStarter.footer ?
+                <Footer FooterData={this.props.state.appStarter.footer}/>
               : <p></p>
             }
           </div>
