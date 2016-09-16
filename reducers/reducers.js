@@ -154,7 +154,7 @@ function appStarter(state = {
             linkData: {
               menuItem: true,
               linkText: "pdf",
-              linkUrl: "#"
+              linkUrl: "/img/tyler_cecchi_resume.pdf"
             }
           }]
         }
