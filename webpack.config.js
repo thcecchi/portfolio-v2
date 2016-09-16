@@ -4,7 +4,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
-    filename: "bundle.js"
+    filename: "./build/bundle.js"
   },
   module: {
     loaders: [
