@@ -11,7 +11,11 @@ class Footer extends Component {
      return {
        footerStyle: {
         paddingTop: "5%",
-        paddingBottom:"1%"
+        paddingBottom:"1%",
+        "@media (max-width : 768px)": {
+            paddingTop: "1%",
+            paddingBottom: "3%"
+        }
        },
        iconContainerStyle: {
          "@media (max-width : 768px)": {

@@ -7,6 +7,7 @@ export default class BodyCopy extends Component {
    return {
      bodyCopyContainer: {
        marginLeft: "5%",
+       marginRight: "5%",
        marginTop: "3%",
        marginBottom: "1%",
        position: "relative"

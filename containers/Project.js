@@ -10,7 +10,8 @@ class Project extends Component {
      return {
        projectCard: {
          backgroundColor: "#fff",
-         marginLeft: "4%"
+         marginLeft: "4%",
+         marginRight: "4%"
        }
      }
    }
