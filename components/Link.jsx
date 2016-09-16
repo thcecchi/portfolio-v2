@@ -96,13 +96,7 @@ export default class Link extends Component {
     }
   }
 
-  logProps() {
-    console.log('link')
-    console.log(this.props)
-  }
-
   render() {
-  this.logProps();
     const { value, options } = this.props
     const styles = this.getStyles();
 

@@ -75,14 +75,7 @@ class Work extends Component {
     this.setState(state)
   }
 
-// logging props////////////
-  logProps() {
-    console.log(this.props)
-  }
-////////////////////////////
-
   render() {
-    this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     const styles = this.getStyles();
     return (

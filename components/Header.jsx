@@ -28,11 +28,6 @@ export default class Header extends Component {
    };
   }
 
-  logProps() {
-    console.log('header')
-    console.log(this.props)
-  }
-
   goToHome() {
     console.log('home')
     console.log(this)
@@ -40,7 +35,6 @@ export default class Header extends Component {
   }
 
   render() {
-    this.logProps()
     const { value, options } = this.props
     const styles = this.getStyles();
 

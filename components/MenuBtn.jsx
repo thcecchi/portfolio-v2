@@ -44,12 +44,7 @@ export default class MenuBtn extends Component {
    }
   }
 
-  logProps() {
-    console.log(this.props)
-  }
-
   render() {
-  this.logProps();
     const { value, options } = this.props
     const styles = this.getStyles();
 

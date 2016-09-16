@@ -20,15 +20,9 @@ export default class Shade extends Component {
    };
   }
 
-  logProps() {
-    console.log('SHADE')
-    console.log(this.props.shadeState)
-  }
-
   render() {
     const { value, options } = this.props
     const styles = this.getStyles();
-    this.logProps()
     return (
       <div style={[styles.shade, this.props.shadeState && styles.menuOpen]}>
       </div>

@@ -18,15 +18,7 @@ class ContactLinkContainer extends Component {
     this.setState(state)
   }
 
-// logging props////////////
-  logProps() {
-    console.log('Contact Links')
-    console.log(this.props)
-  }
-////////////////////////////
-
   render() {
-    this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     return (
       <div>

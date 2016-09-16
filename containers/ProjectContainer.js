@@ -18,15 +18,7 @@ class ProjectContainer extends Component {
     this.setState(state)
   }
 
-// logging props////////////
-  logProps() {
-    console.log('ProjectContainer')
-    console.log(this.props)
-  }
-////////////////////////////
-
   render() {
-    this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     return (
       <div>

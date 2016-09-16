@@ -36,15 +36,7 @@ class Footer extends Component {
     this.setState(state)
   }
 
-// logging props////////////
-  logProps() {
-    console.log('Footer Icons Links')
-    console.log(this.props)
-  }
-////////////////////////////
-
   render() {
-    this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     const styles = this.getStyles();
     return (

@@ -18,15 +18,7 @@ class BodyCopyContainer extends Component {
     this.setState(state)
   }
 
-// logging props////////////
-  logProps() {
-    console.log('Body Copy Container')
-    console.log(this.props)
-  }
-////////////////////////////
-
   render() {
-    this.logProps()
     const { state, isFetching, dispatch, getState } = this.props
     return (
       <div>
