@@ -10,7 +10,6 @@ function appStarter(state = {
 }, action) {
   switch (action.type) {
   case START_APP:
-    console.log('starting app reducer')
     return Object.assign({}, state, {
       headerText: "I'm Tyler Cecchi",
       subHeaders: [{
@@ -87,8 +86,6 @@ function appStarter(state = {
       }
     })
     case TOGGLE_MENU:
-      console.log('toggle Menu reducer')
-      console.log(action.menuState)
       return Object.assign({}, state, {
         menu: {
           menuState: action.menuState,
@@ -163,7 +160,6 @@ function appStarter(state = {
         }
       })
     case SELECT_PROJECT:
-      console.log('select project reducer')
       if(action.projectId == "hoopstats") {
         return Object.assign({}, state, {
           project: {

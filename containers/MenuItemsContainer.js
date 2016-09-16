@@ -50,8 +50,6 @@ MenuItemsContainer.propTypes = {
 }
 
 function mapStateToProps(state) {
-  console.log('state')
-  console.log(state)
   const { headerText, subHeaders, projects, menu } = state
 
   return {

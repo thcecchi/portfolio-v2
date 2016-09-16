@@ -29,8 +29,6 @@ export default class Header extends Component {
   }
 
   goToHome() {
-    console.log('home')
-    console.log(this)
     browserHistory.push('/');
   }
 

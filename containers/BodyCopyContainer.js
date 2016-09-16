@@ -37,8 +37,6 @@ BodyCopyContainer.propTypes = {
 }
 
 function mapStateToProps(state) {
-  console.log('state')
-  console.log(state)
   const { headerText, subHeaders, projects } = state
 
   return {
