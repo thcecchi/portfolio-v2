@@ -35,7 +35,7 @@ function appStarter(state = {
             linkUrl: "/work/"
           },
           descriptionData: {
-            projectDescription: "DaFans is a geolocated messaging site that allows NFL fans to chat with other who are in the same city or town."
+            projectDescription: "DaFans is a geolocated messaging site that allows NFL fans to chat with other fans who are in the same city or town."
           }
       }],
       menu: {
@@ -43,7 +43,7 @@ function appStarter(state = {
         menuBtnText: "Menu"
       },
       bodyCopy: [{
-        bodyText: "My focus is at the intersection of communication and and front end web technology. I enjoy thinking about and building new ways to tell stories on the web through data visualization interactive editorial and content strategy, I love to talk shop -- contact me at:"
+        bodyText: "My focus is at the intersection of communication and and front end web technology. I enjoy thinking about and building new ways to tell stories on the web through data visualization, interactive editorial and content strategy. I love to talk shop -- contact me at:"
       }],
       contactLinks: [{
         linkData: {
@@ -183,15 +183,15 @@ function appStarter(state = {
               imageSrc: "../img/hoopstats-search.png"
             },
             projectBody: [{
-              bodyText: "HoopStats is an app that allows users to search for NBA player's stats faster and more efficiently. There are plently of sites where you can go and look up LeBron James' season averages and shooting percentages. The problem is that most other sites force users to visit different pages for each player you look up, which inevitable slows users down. Additonally, statistics are usually presented all together in some kind of table which makes them well organized, but difficult to read at a glance. As an NBA fan I found myself watching a game or talking hoops with friends and having to spend more time than I wanted to looking up players in the game that I was watching than actually watching the game."
+              bodyText: "HoopStats is an app that allows users to search for NBA player's stats faster and more efficiently. While there are plently of sites that allow users to look up LeBron James' season averages and shooting percentages, most of those other sites force users to visit different pages for each player they want to look up, which can make the overall experience a bit clunky. Additonally, most other sites present statistics in some kind of table which makes them well organized, but difficult to read at a glance and scan. As an NBA fan I found myself watching a game or talking hoops with friends and having to spend more time than I wanted to looking up the stats of the players I was watching than actually watching the game."
             },
             {
               imageSrc: "../img/hoopstats-stats.png",
-              bodyText: "Using the NBA's stats API I built HoopStats as a site that pulls down each player's stats when users first get to the site. Since there are on;y around 350 players in the NBA's dataset, it's a cheap upfront expense that allows for faster searches later on."
+              bodyText: "Using the NBA's stats API I built HoopStats as a site that pulls down each player's stats when users first enter the site. Since there are only around 350 players in the NBA's data set, it's a cheap upfront expense that allows for faster searches later on."
             },
             {
               imageSrc: "../img/hoopstats-shots.png",
-              bodyText: "Other statistics sites assume that users want all stats in one place. HoopStats challenges that idea by initially only showing users season averages in points, assists, rebounds, what school or country the player is from and thier PIE%, which is essentially and evaluation of the value that player adds when they are only the floor. The information is designed to be quickly and easily scanned, and should user want specific shooting stats, they are available via pie charts on a subsequent screen. Assuming that users will jump around from player to player, the ability to search for another player is present on all three screens in the app."
+              bodyText: "Other statistics sites assume that users want all stats in one place. HoopStats challenges that idea by initially only showing users season averages in points, assists, rebounds, what school or country the player is from and thier PIE%, which is essentially and evaluation of the value that player adds when they are only the floor. The information is designed to be quickly and easily scanned. Should the user want specific shooting stats, they are available via pie charts on a subsequent screen. Assuming that users will jump around from player to player, the ability to search for another player is present on all three screens in the app. A custom autocomplete was also built to assist in typing player's names in the search."
             }],
             menu: {
               menuState: "closed",
@@ -235,15 +235,15 @@ function appStarter(state = {
               imageSrc: "../img/daafans-thread.png"
             },
             projectBody: [{
-              bodyText: "Those who live in a city with no NFL team, or are a fan of a team from another city know what it's like to feel disconnected from the rest of the fan base. Of course there are always blog comment sections if you wanted to get into a spirited debate, but nothing can replace the local feel."
+              bodyText: "Those who live in a city with no NFL team, or those who are a fan of a team from another city know what it's like to feel disconnected from the rest of the fan base. Of course there are always blog comment sections if you wanted to get into a spirited debate, but nothing can replace the local feel that lost when rooting for a team from another city."
             },
             {
               imageSrc: "../img/daafans-post.png",
-              bodyText: "DaaFans is a geolocated messaging app designed to connect NFL fans in teh same city. Nothing can replace being in the actual city where your team is from, but DaaFans aims to connect those who are fans in a similar situation. DaaFans will find the user's location and then present them with channels dedicated for each NFL team."
+              bodyText: "DaaFans is a geolocated messaging app designed to connect NFL fans in the same city. Nothing can replace being in the actual city where your team is from, but DaaFans aims to connect fans who cheer for team from another city. DaaFans will find the user's location and then present them with channels dedicated for each NFL team where only those in the same geographic area can view the channel's contents."
             },
             {
               imageSrc: "../img/daafans-menu.png",
-              bodyText: "In each room users are presented with a message feed and able post new messages or reply to existing ones. To control the depth of replies and maintain a readable feed, only one reply can be posted to each message. Messages stay in the feed for one week before they are deleted."
+              bodyText: "In each channel, users are presented with a message feed and the ability to post new messages or reply to existing ones. Messages are anonymous and stay in the feed for one week before they are deleted."
             }]
           },
           menu: {
