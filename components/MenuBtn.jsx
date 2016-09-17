@@ -30,7 +30,7 @@ export default class MenuBtn extends Component {
      },
      menuBtnText: {
        color: '#ff6a40',
-       fontFamily: 'Roboto Mono',
+       fontFamily: 'Roboto Mono, monospace',
        letterSpacing: 1.75,
        fontWeight: 100,
        fontSize: "16px",

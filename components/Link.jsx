@@ -16,7 +16,7 @@ export default class Link extends Component {
      },
      linkText: {
        color: '#ff6a40',
-       fontFamily: 'Roboto Mono',
+       fontFamily: 'Roboto Mono, monospace',
        letterSpacing: 1.25,
        fontWeight: 100,
        fontSize: "16px",
@@ -47,7 +47,7 @@ export default class Link extends Component {
      top: "0px"
     },
     menuTitle: {
-      fontFamily: 'Roboto Mono',
+      fontFamily: 'Roboto Mono, monospace',
       letterSpacing: "1.25",
       fontWeight: "100",
       color: "#282830",
@@ -65,7 +65,7 @@ export default class Link extends Component {
     },
     seperatorStyle: {
       color: '#ff6a40',
-      fontFamily: 'Roboto Mono',
+      fontFamily: 'Roboto Mono, monospace',
       marginLeft: "10%",
       letterSpacing: 1,
       fontWeight: 100,

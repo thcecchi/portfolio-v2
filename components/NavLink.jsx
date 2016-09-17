@@ -18,7 +18,7 @@ export default class NavLink extends Component {
      },
      linkText: {
        color: '#ff6a40',
-       fontFamily: 'Roboto Mono',
+       fontFamily: 'Roboto Mono, monospace',
        letterSpacing: 1.25,
        fontWeight: 100,
        fontSize: "16px",

@@ -12,7 +12,7 @@ export default class Header extends Component {
      },
      headerText: {
        color: '#ff6a40',
-       fontFamily: 'Roboto Mono',
+       fontFamily: 'Roboto Mono, monospace',
        letterSpacing: "1.75",
        fontWeight: "400",
        fontSize: "28px",

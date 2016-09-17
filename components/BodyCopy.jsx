@@ -15,7 +15,7 @@ export default class BodyCopy extends Component {
      bodyCopyText: {
       fontSize: "14px",
       color: "#282830",
-      fontFamily: "Roboto Mono",
+      fontFamily: "Roboto Mono, monospace",
       letterSpacing: 1.75,
       lineHeight: "1.75",
       fontWeight: 100,

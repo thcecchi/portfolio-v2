@@ -14,7 +14,7 @@ export default class Loading extends Component {
      loading: {
        display: "block",
        margin: "0 auto",
-       fontFamily: "Roboto Mono",
+       fontFamily: "Roboto Mono, monospace",
        fontWeight: "500",
        textAlign: "center"
      }

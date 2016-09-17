@@ -14,7 +14,7 @@ export default class ProjectDescription extends Component {
      },
      descriptionText: {
         color: '#282830',
-        fontFamily: 'Roboto Mono',
+        fontFamily: 'Roboto Mono, monospace',
         letterSpacing: 1.25,
         fontWeight: 100,
         fontSize: "12px",
