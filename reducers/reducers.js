@@ -170,7 +170,7 @@ function appStarter(state = {
             projectLinks: [{
                 linkData: {
                   linkText: "Live Site",
-                  linkUrl: "https://hoopstats.info"
+                  linkUrl: "http://hoopstats.info"
                 }
               },
               {
