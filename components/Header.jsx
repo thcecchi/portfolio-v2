@@ -22,7 +22,7 @@ export default class Header extends Component {
      dots: {
       position: "absolute",
       zIndex: "-2",
-      top: "35px",
+      top: "38px",
       opacity: ".6"
      }
    };
