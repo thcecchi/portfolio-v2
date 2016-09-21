@@ -55,7 +55,7 @@ function appStarter(state = {
       {
         linkData: {
           linkText: "@tylercecchi",
-          linkUrl: "https://twitter.com/@tylercecchi"
+          linkUrl: "https://twitter.com/tylercecchi"
         }
       }],
       footer: {
@@ -80,7 +80,7 @@ function appStarter(state = {
         {
           linkData: {
             iconName: "twitter",
-            linkUrl: "https://twitter.com/@tylercecchi"
+            linkUrl: "https://twitter.com/tylercecchi"
           }
         }]
       }
@@ -141,7 +141,7 @@ function appStarter(state = {
             linkData: {
               menuItem: true,
               linkText: "twitter",
-              linkUrl: "https://twitter.com/@tylercecchi"
+              linkUrl: "https://twitter.com/tylercecchi"
             }
           },
           {
@@ -207,7 +207,7 @@ function appStarter(state = {
             {
               linkData: {
                 linkText: "@tylercecchi",
-                linkUrl: "https://twitter.com/@tylercecchi"
+                linkUrl: "https://twitter.com/tylercecchi"
               }
             }]
           }
@@ -260,7 +260,7 @@ function appStarter(state = {
           {
             linkData: {
               linkText: "@tylercecchi",
-              linkUrl: "https://twitter.com/@tylercecchi"
+              linkUrl: "https://twitter.com/tylercecchi"
             }
           }]
         })
