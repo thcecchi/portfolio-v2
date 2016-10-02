@@ -13,7 +13,7 @@ function appStarter(state = {
     return Object.assign({}, state, {
       headerText: "I'm Tyler Cecchi",
       subHeaders: [{
-          subHeadText: "A designer and front end developer living in Charleston, SC"
+          subHeadText: "A designer and developer working at the intersection of communication and technology"
         },
         {
           subHeadText: "Here are a couple of web things I've created recently:"
