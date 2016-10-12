@@ -43,7 +43,7 @@ function appStarter(state = {
         menuBtnText: "Menu"
       },
       bodyCopy: [{
-        bodyText: "My focus is at the intersection of communication and and front end web technology. I enjoy thinking about and building new ways to tell stories on the web through data visualization, interactive editorial and content strategy. I love to talk shop -- contact me at:"
+        bodyText: "My focus is at the intersection of communication and technology. I enjoy thinking about and building new ways to tell stories and create experiences on the web that enable strong relationships between people, products and brands. I view technology as a pliable tool with which marketers can create systems, experiences and communications that are able to change and grow with a brand. I love to talk shop -- contact me at:"
       }],
       contactLinks: [{
         linkData: {
