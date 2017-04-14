@@ -18,11 +18,9 @@ class Footer extends Component {
         }
        },
        iconContainerStyle: {
-         "@media (max-width : 768px)": {
            position: "relative",
            display: "flex",
            justifyContent: "space-around"
-         }
        }
      }
    }

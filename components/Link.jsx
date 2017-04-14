@@ -36,7 +36,7 @@ export default class Link extends Component {
      menuItem: {
       display: "block",
       paddingBottom: "10%",
-      fontSize: "14px",
+      fontSize: "18px",
       marginTop: "-10px",
       opacity: "0",
       position: "relative",
@@ -49,11 +49,11 @@ export default class Link extends Component {
     menuTitle: {
       fontFamily: 'Roboto Mono, monospace',
       letterSpacing: "1.25",
-      fontWeight: "100",
+      fontWeight: "400",
       color: "#282830",
       display: "inline-block",
       paddingBottom: "1%",
-      fontSize: "16px",
+      fontSize: "20px",
       opacity: "0",
       position: "relative",
       transition: "opacity .2s ease-in"

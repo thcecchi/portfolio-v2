@@ -33,7 +33,7 @@ export default class MenuBtn extends Component {
        fontFamily: 'Roboto Mono, monospace',
        letterSpacing: 1.75,
        fontWeight: 100,
-       fontSize: "16px",
+       fontSize: "22px",
        cursor: "pointer",
        textDecoration: "underline",
        textAlign: "right"

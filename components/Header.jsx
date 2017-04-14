@@ -15,7 +15,7 @@ export default class Header extends Component {
        fontFamily: 'Roboto Mono, monospace',
        letterSpacing: "1.75",
        fontWeight: "400",
-       fontSize: "28px",
+       fontSize: "32px",
        zIndex: "2",
        cursor: "pointer"
      },
@@ -39,7 +39,7 @@ export default class Header extends Component {
     return (
       <div onClick={this.goToHome.bind(this)} style={styles.headerContainer}>
         <h1 key="header-text" key="header-text" style={styles.headerText}>{this.props.headerText}</h1>
-        <svg width="297px" style={styles.dots} height="21px" viewBox="0 0 297 21" version="1.1">
+        <svg width="336px" style={styles.dots} height="30px" viewBox="0 0 297 21" version="1.1">
             <title>dot-bar</title>
             <defs></defs>
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

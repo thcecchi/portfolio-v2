@@ -6,15 +6,15 @@ export default class Shade extends Component {
    return {
      shade: {
        opacity: "0",
-       width: "100vw",
-       height: "100vh",
+       width: "100%",
+       height: "100%",
        zIndex: "-5",
        position: "absolute",
        background: "#fff",
        transition: "opacity .1s ease-in"
      },
      menuOpen: {
-      opacity: ".9",
+      opacity: ".95",
       zIndex: "5"
      }
    };
